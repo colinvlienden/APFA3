@@ -11,4 +11,11 @@ public class Rit extends Stap{
     public Integer getDistance() {
         return distance;
     }
+
+    @Override
+    public String toString() {
+        return "Rit{" +
+                "distance=" + distance +
+                '}';
+    }
 }

@@ -11,4 +11,11 @@ public class Treinrit extends Stap{
     public Integer getDuration() {
         return duration;
     }
+
+    @Override
+    public String toString() {
+        return "Treinrit{" +
+                "duration=" + duration +
+                '}';
+    }
 }

@@ -11,4 +11,11 @@ public class Vlucht extends Stap{
     public Integer getExpense() {
         return expense;
     }
+
+    @Override
+    public String toString() {
+        return "Vlucht{" +
+                "expense=" + expense +
+                '}';
+    }
 }
