@@ -1,14 +1,16 @@
 package com;
 
 public class Vlucht extends Stap{
-    private final Integer expense;
+    private final int expense;
+    private final int lostLuggage;
 
-    public Vlucht(String start, String end, Integer expense) {
+    public Vlucht(String start, String end, int expense, int lostLuggage) {
         super(start, end);
         this.expense = expense;
+        this.lostLuggage = lostLuggage;
     }
 
-    public Integer getExpense() {
+    public int getExpense() {
         return expense;
     }
 
@@ -16,6 +18,7 @@ public class Vlucht extends Stap{
     public String toString() {
         return "Vlucht{" +
                 "expense=" + expense +
+                ", lostLuggage=" + lostLuggage +
                 '}';
     }
 
