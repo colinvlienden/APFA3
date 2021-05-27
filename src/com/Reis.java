@@ -30,15 +30,15 @@ public class Reis implements Comparable<Reis> {
 
         if (reis1 < reis2){
             System.out.println("De " + this.getName() + " is korter dan de " + reis.getName());
-            return 1;
+            return reis1;
         }
         else if(reis1 > reis2){
             System.out.println("De " + this.getName() + " is langer dan de " + reis.getName());
-            return 1;
+            return reis1;
         }
         else {
             System.out.println("De " + this.getName() + " is gelijk aan de " + reis.getName());
-            return 1;
+            return reis1;
         }
     }
 

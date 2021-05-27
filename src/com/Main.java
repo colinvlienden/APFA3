@@ -2,8 +2,6 @@ package com;
 
 import java.util.PriorityQueue;
 
-import static java.lang.System.out;
-
 public class Main {
     public static void main(String [] args) {
 
@@ -24,7 +22,7 @@ public class Main {
         Rit.add(R0);
 
 
-        //Vlucht
+        //Vlucht 1 op 50 kans dat de bagage kwijt raakt
         Vlucht V0 = new Vlucht("Culemborg", "Amsterdam", 75, 125);
 
         PriorityQueue<Stap> Vlucht = new PriorityQueue<Stap>();
@@ -43,9 +41,9 @@ public class Main {
         vliegtuig.setSteps(Vlucht);
 
         // compare
-        trein.compareTo(auto);
-        trein.compareTo(vliegtuig);
+        int check0 = trein.compareTo(auto);
+        int check1 = trein.compareTo(vliegtuig);
+        int check2 = auto.compareTo(vliegtuig);
 
-        auto.compareTo(vliegtuig);
     }
 }
