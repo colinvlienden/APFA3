@@ -1,7 +1,7 @@
 package com;
 
 public class Vlucht extends Stap{
-    private Integer expense;
+    private final Integer expense;
 
     public Vlucht(String start, String end, Integer expense) {
         super(start, end);
@@ -17,5 +17,10 @@ public class Vlucht extends Stap{
         return "Vlucht{" +
                 "expense=" + expense +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Stap o) {
+        return 0;
     }
 }
