@@ -1,15 +1,21 @@
 package com;
 
 public class Rit extends Stap{
-    private final Integer distance;
+    private final int distance;
 
-    public Rit(String start, String end, Integer distance) {
+    public Rit(String start, String end, int distance) {
         super(start, end);
         this.distance = distance;
     }
 
-    public Integer getDistance() {
+    @Override
+    public int getWeight() {
         return distance;
+    }
+
+    @Override
+    public int compareTo(Stap o) {
+        return 0;
     }
 
     @Override
@@ -17,10 +23,5 @@ public class Rit extends Stap{
         return "Rit{" +
                 "distance=" + distance +
                 '}';
-    }
-
-    @Override
-    public int compareTo(Stap o) {
-        return 0;
     }
 }

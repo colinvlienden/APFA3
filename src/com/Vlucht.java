@@ -10,8 +10,14 @@ public class Vlucht extends Stap{
         this.lostLuggage = lostLuggage;
     }
 
-    public int getExpense() {
+    @Override
+    public int getWeight() {
         return expense;
+    }
+
+    @Override
+    public int compareTo(Stap o) {
+        return 0;
     }
 
     @Override
@@ -22,8 +28,4 @@ public class Vlucht extends Stap{
                 '}';
     }
 
-    @Override
-    public int compareTo(Stap o) {
-        return 0;
-    }
 }
