@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 public class Reis implements Comparable<Reis> {
 
-    private String name;
+    private final String name;
     private PriorityQueue<Stap> steps;
 
     public Reis(String name) {

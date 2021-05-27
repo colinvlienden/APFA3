@@ -25,7 +25,7 @@ public class Main {
 
 
         //Vlucht
-        Vlucht V0 = new Vlucht("Culemborg", "Amsterdam", 75, 10);
+        Vlucht V0 = new Vlucht("Culemborg", "Amsterdam", 75, 125);
 
         PriorityQueue<Stap> Vlucht = new PriorityQueue<Stap>();
         Vlucht.add(V0);

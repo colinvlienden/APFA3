@@ -1,18 +1,32 @@
 package com;
 
+import java.util.Random;
+
 public class Vlucht extends Stap{
     private final int expense;
-    private final int lostLuggage;
 
-    public Vlucht(String start, String end, int expense, int lostLuggage) {
+    //lostLuggage
+    private final int priceLostLuggage;
+
+    Random rand = new Random();
+    //1 out of 50 lost Luggage
+    boolean val = rand.nextInt(50)==0;
+
+    public Vlucht(String start, String end, int expense, int priceLostLuggage) {
         super(start, end);
         this.expense = expense;
-        this.lostLuggage = lostLuggage;
+        this.priceLostLuggage = priceLostLuggage;
     }
 
     @Override
     public int getWeight() {
-        return expense;
+        //check lost luggage
+        if (val){
+            return expense + priceLostLuggage;
+        }
+        else{
+            return expense;
+        }
     }
 
     @Override
@@ -24,8 +38,9 @@ public class Vlucht extends Stap{
     public String toString() {
         return "Vlucht{" +
                 "expense=" + expense +
-                ", lostLuggage=" + lostLuggage +
+                ", priceLostLuggage=" + priceLostLuggage +
+                ", val=" + val +
+                ", Total price=" + getWeight() +
                 '}';
     }
-
 }

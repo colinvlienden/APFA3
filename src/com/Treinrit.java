@@ -24,5 +24,4 @@ public class Treinrit extends Stap{
                 "duration=" + duration +
                 '}';
     }
-
 }
