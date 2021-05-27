@@ -18,9 +18,18 @@ public class Main {
         Rit R0 = new Rit("Culemborg", "Utrecht", 20);
         Rit R1 = new Rit("Utrecht", "Amsterdam", 20);
 
-        //Vlucht
-        Vlucht V0 = new Vlucht("Culemborg", "Utrecht", 20);
-        Vlucht V1 = new Vlucht("Utrecht", "Amsterdam", 20);
+        PriorityQueue<Stap> reisB = new PriorityQueue<>();
+        reisB.add(R0);
+        reisB.add(R1);
+        System.out.println(reisB);
 
+        //Vlucht
+        Vlucht V0 = new Vlucht("Culemborg", "Utrecht", 20, 2);
+        Vlucht V1 = new Vlucht("Utrecht", "Amsterdam", 20, 2);
+
+        PriorityQueue<Stap> reisC = new PriorityQueue<>();
+        reisC.add(V0);
+        reisC.add(V1);
+        System.out.println(reisC);
     }
 }
