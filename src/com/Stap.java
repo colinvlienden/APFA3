@@ -1,6 +1,6 @@
 package com;
 
-public class Stap {
+public abstract class Stap implements java.lang.Comparable<Stap> {
     private String start;
     private String end;
 
@@ -9,11 +9,4 @@ public class Stap {
         this.end = end;
     }
 
-    public String getStart() {
-        return start;
-    }
-
-    public String getEnd() {
-        return end;
-    }
 }
