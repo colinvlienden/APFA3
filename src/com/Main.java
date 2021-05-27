@@ -18,14 +18,14 @@ public class Main {
 
 
         //Rit
-        Rit R0 = new Rit("Culemborg", "Utrecht", 30);
+        Rit R0 = new Rit("Culemborg", "Amsterdam", 40);
 
         PriorityQueue<Stap> Rit = new PriorityQueue<Stap>();
         Rit.add(R0);
 
 
         //Vlucht
-        Vlucht V0 = new Vlucht("Culemborg", "Utrecht", 90, 10);
+        Vlucht V0 = new Vlucht("Culemborg", "Amsterdam", 75, 10);
 
         PriorityQueue<Stap> Vlucht = new PriorityQueue<Stap>();
         Vlucht.add(V0);
@@ -33,19 +33,19 @@ public class Main {
 
 
         //Create reis
-        Reis trein = new Reis();
+        Reis trein = new Reis("Treinrit");
         trein.setSteps(Treinrit);
 
-        Reis auto = new Reis();
+        Reis auto = new Reis("Rit");
         auto.setSteps(Rit);
 
-        Reis vliegtuig = new Reis();
+        Reis vliegtuig = new Reis("Vlucht");
         vliegtuig.setSteps(Vlucht);
 
-        /* compare */
-        out.println(trein.compareTo(trein));
-
+        // compare
         trein.compareTo(auto);
         trein.compareTo(vliegtuig);
+
+        auto.compareTo(vliegtuig);
     }
 }
